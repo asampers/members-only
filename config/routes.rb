@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-   #root "users#index"
+   #root "devise/sessions#new"
 
   resources :users
-  resources :posts 
+  resources :posts, only [:new, :create]
 end
