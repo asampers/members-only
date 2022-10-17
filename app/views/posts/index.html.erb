@@ -4,7 +4,13 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= post.title %>
+      <%= post.title %>:
+      '<%= post.body %>'
+      <% if user_signed_in? %>
+        Author: <%= post.user.username %>
+      <% else %>  
+        Author: Anonymous
+      <% end %>  
     </li> 
   <% end %> 
 </ul>    
