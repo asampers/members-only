@@ -6,5 +6,5 @@ Rails.application.routes.draw do
    #root "devise/sessions#new"
 
   resources :users
-  resources :posts, only [:new, :create]
+  resources :posts, only: [:new, :create, :index]
 end
